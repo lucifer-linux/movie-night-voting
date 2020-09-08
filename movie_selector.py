@@ -20,5 +20,3 @@ def random_list(list, n):
 
 #string for discord poll
 print(f'!poll [Please select a movie for tonight] {", ".join(random_list(movie_list(responses),3))}')
-
-breakpoint
