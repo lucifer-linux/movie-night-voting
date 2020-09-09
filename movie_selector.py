@@ -1,6 +1,7 @@
 import random
 import os
 from google_sheets_pull import *
+from imdb_search import *
 
 def movie_list(responses):
     unwatched_list = []
@@ -19,4 +20,7 @@ def random_list(list, n):
     return selections
 
 #string for discord poll
-print(f'!poll [Please select a movie for tonight] {", ".join(random_list(movie_list(responses),3))}')
+movies = random_list(movie_list(responses),3)
+print(f'!poll [Please select a movie for tonight] {", ".join(movies)}\n')
+for movie in movies:
+    
